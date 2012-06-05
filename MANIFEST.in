@@ -1,0 +1,4 @@
+include README.md
+recursive-include mezzanine-default *.*
+recursive-include mezzanine-mobile *.*
+exclude .gitignore
