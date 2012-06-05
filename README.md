@@ -11,9 +11,9 @@ Usage
 It is recommended to place the themes as high as possible, to make sure all the app templates are overridden.
 
     INSTALLED_APPS = (
-        'mezzanine_themes.my_awesome_theme_child',
-        'mezzanine_themes.my_awesome_theme',
-        'mezzanine_themes.mezzanine_default',
+        'mezzanine-themes.my_awesome_theme_child',
+        'mezzanine-themes.my_awesome_theme',
+        'mezzanine-themes.mezzanine_default',
         ...
     )
 
@@ -83,3 +83,4 @@ External Links
     [1] Django: <https://www.djangoproject.com/>
     [2] Mezzanine: <http://mezzanine.jupo.org/>
     [3] Pinax Project: <http://pinaxproject.com/>
+
