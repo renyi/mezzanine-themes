@@ -68,13 +68,15 @@ You'll notice that there are no *.py files in the themes. I prefer it this way, 
 
 Release Notes
 ---
+2012-06-05: Updated templates to mezzanine 1.1.
 2012-03-08:  First release. Examples coming soon.
 
 Contributors
 ---
 If you have a theme you'd like to share, just send a pull request.
     
-    Renyi Khor (renyi.ace@gmail.com)
+    Renyi Khor (https://github.com/renyi)
+    Dmitry Falk (https://github.com/dfalk)
 
 External Links
 ---
