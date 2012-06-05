@@ -1,0 +1,22 @@
+{% load i18n mezzanine_tags %}
+
+{% if request.user.is_authenticated %}
+    {% trans "Welcome" %}, 
+    {% url profile user.username as profile_url %}
+    {% if profile_url %}
+        <a href="{{ profile_url }}">{{ request.user.username }}</a>!
+        <a href="{% url profile_update %}"
+            >{% trans "Update profile" %}</a>
+    {% else %}
+        <a href="{% url profile_update %}">{{ request.user.username }}</a>!
+    {% endif %}
+    <a href="{{ settings.LOGOUT_URL }}?next={{ request.path }}"
+        >{% trans "Log out" %}</a>
+{% else %}
+    {% trans "Welcome" %}, Guest!
+    <a href="{% url login %}?next={{ request.path }}"
+        >{% trans "Log in" %}</a>
+    {% trans "or" %}
+    <a href="{% url signup %}?next={{ request.path }}"
+        >{% trans "Sign up" %}</a>
+{% endif %}

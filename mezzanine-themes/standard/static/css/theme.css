@@ -1,0 +1,37 @@
+/* Header */
+
+#header {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.site-title {
+    font-size: 32px;
+    line-height: 32px;
+    color: #333333;
+}
+
+#user-info {
+    text-align: right;
+}
+
+.form-search {
+    margin: 4px 0 4px;
+}
+
+/* Breadcrumb */
+
+.breadcrumb-custom {
+    margin-left: 4px;
+    margin-bottom: 10px;
+}
+
+.breadcrumb-custom li {
+    display: inline-block;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.breadcrumb-custom .divider {
+    margin: 0 5px;
+    color: #999999;
+}
