@@ -35,9 +35,21 @@ body {
     margin: 4px 0 4px;
 }
 
+/* Navigation */
+
+#navigation {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.nav {
+    margin-bottom: 0px;
+}
+
 /* Breadcrumb */
 
 .breadcrumb-custom {
+    margin-top: 0px;
     margin-left: 4px;
     margin-bottom: 10px;
 }
