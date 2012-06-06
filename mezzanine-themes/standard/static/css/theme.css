@@ -21,18 +21,29 @@ h6 {
 
 #header {
     margin-top: 10px;
+    padding-bottom: 4px;
+    background: #f5f5f5;
 }
 
 .site-title {
+    margin-top: 8px;
+    margin-left: 4px;
     font-family: Georgia;
     font-size: 38px;
     line-height: 32px;
+}
+
+.site-title a {
     color: #333333;
 }
 
-.site-title:hover {
+.site-title a:hover {
     text-decoration: none;
     color: #333333;
+}
+
+.site-tagline {
+    margin-left: 4px;
 }
 
 #user-info {

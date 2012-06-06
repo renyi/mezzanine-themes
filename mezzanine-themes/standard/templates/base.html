@@ -48,8 +48,8 @@ $(function() {
 
 <div id="header" class="container">
     <div class="row">
-        <div class="span6">
-            {% if settings.SITE_TITLE %}<a class="site-title" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+        <div id="site-info" class="span6">
+            {% if settings.SITE_TITLE %}<div class="site-title"><a href="/">{{ settings.SITE_TITLE }}</a></div>{% endif %}
             {% if settings.SITE_TAGLINE %}<div class="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
         </div>
         <div id="user-info" class="span6">

@@ -9,11 +9,11 @@
             >{% trans "Update profile" %}</a>
     {% else %}
         <a href="{% url profile_update %}">{{ request.user.username }}</a>!
-    {% endif %}
+    {% endif %}<br />
     <a href="{{ settings.LOGOUT_URL }}?next={{ request.path }}"
         >{% trans "Log out" %}</a>
 {% else %}
-    {% trans "Welcome" %}, Guest!
+    {% trans "Welcome" %}, Guest!<br />
     <a href="{% url login %}?next={{ request.path }}">
     {% trans "Log in" %}</a> / 
     <a href="{% url signup %}?next={{ request.path }}">
