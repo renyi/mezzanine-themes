@@ -1,8 +1,18 @@
+/* Html */
+
+body {
+    background: url(/static/img/bg.png) #cccccc;
+}
+
+.container {
+    background: #ffffff;
+    padding: 10px;
+}
+
 /* Header */
 
 #header {
     margin-top: 10px;
-    margin-bottom: 5px;
 }
 
 .site-title {
@@ -38,7 +48,7 @@
 
 /* Footer */
 
-#footer {background:rgba(220,220,220, 0.1); padding:10px 0; text-align:center;}
+#footer {background:rgba(180,180,180, 0.5); text-align:center;}
 #footer ul {text-align:left; display:inline-block; width:auto;}
 #footer li {float:left; list-style-type:none;}
 #footer li li {float:none; clear:both; width:120px; padding:2px 0; margin-right:2px;}
