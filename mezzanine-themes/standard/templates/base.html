@@ -57,7 +57,8 @@ $(function() {
             {% include "includes/user_panel.html" %}
             {% endnevercache %}
             <form action="{% url search %}" class="form-search">
-            <input class="search-query" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
+            <input class="input-medium" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
+            <button class="btn btn-small" type="submit"><i class="icon-search"></i></button>
             </form>
         </div>
     </div>
