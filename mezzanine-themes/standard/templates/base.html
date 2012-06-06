@@ -49,8 +49,11 @@ $(function() {
 <div id="header" class="container">
     <div class="row">
         <div id="site-info" class="span6">
-            {% if settings.SITE_TITLE %}<div class="site-title"><a href="/">{{ settings.SITE_TITLE }}</a></div>{% endif %}
-            {% if settings.SITE_TAGLINE %}<div class="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
+            <div id="site-logo"><a href="/"><img src="{{ STATIC_URL }}img/logo.png" /></a></div>
+            <div id="site-titles">
+            {% if settings.SITE_TITLE %}<div id="site-title"><a href="/">{{ settings.SITE_TITLE }}</a></div>{% endif %}
+            {% if settings.SITE_TAGLINE %}<div id="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
+            </div>
         </div>
         <div id="user-info" class="span6">
             {% nevercache %}

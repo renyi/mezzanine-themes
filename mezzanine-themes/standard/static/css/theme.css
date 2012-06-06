@@ -25,25 +25,34 @@ h6 {
     background: #f5f5f5;
 }
 
-.site-title {
-    margin-top: 8px;
+#site-logo {
+    float: left;
     margin-left: 4px;
+    margin-right: 6px;
+}
+
+#site-logo img {
+    box-shadow: 0 0 0px #BBBBBB;
+}
+
+#site-titles {
+    margin-top: 12px;
+    margin-left: 4px;
+}
+
+#site-title {
     font-family: Georgia;
     font-size: 38px;
     line-height: 32px;
 }
 
-.site-title a {
+#site-title a {
     color: #333333;
 }
 
-.site-title a:hover {
+#site-title a:hover {
     text-decoration: none;
     color: #333333;
-}
-
-.site-tagline {
-    margin-left: 4px;
 }
 
 #user-info {
