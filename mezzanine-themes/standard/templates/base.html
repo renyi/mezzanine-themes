@@ -111,10 +111,12 @@ $(function() {
 </div>
 </div>
 
-<div id="footer" class="container">
-{% page_menu "pages/menus/footer.html" %}
-<br style="clear:both">
-<p>
+<div id="footer-line" class="container">
+    <div class="row">
+    <div class="span6">
+    (c) 2012, {% trans "Company Name" %}, {% trans "development and design by" %} Name
+    </div>
+    <div id="footer-powered" class="span6">
     {% trans "Powered by" %}
     <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
     <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
@@ -126,7 +128,13 @@ $(function() {
     <span class="separator">|</span>
     <a href="{% url set_device "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
     {% endifinstalled %}
-</p>
+    <a onclick="scrollToTop();return false;" href="#"><i class="icon-arrow-up"></i></a>
+    </div>
+    </div>
+</div>
+
+<div id="footer" class="container">
+    {% page_menu "pages/menus/footer.html" %}
 </div>
 
 {% include "includes/footer_scripts.html" %}

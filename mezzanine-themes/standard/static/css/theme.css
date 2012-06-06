@@ -110,10 +110,15 @@ h6 {
 
 /* Footer */
 
-#footer {background:rgba(180,180,180, 0.5); text-align:center;}
-#footer ul {text-align:left; display:inline-block; width:auto;}
+#footer-line {background:#cccccc; color:#666666;}
+#footer-line a {color:#666666; text-decoration:underline;}
+#footer-line .icon-arrow-up {opacity:0.7; margin-left:4px;}
+#footer-powered {text-align:right;}
+#footer {background:rgba(240,240,240, 0.7); text-align:center;}
+#footer ul {text-align:left; display:inline-block; width:auto; margin-top:0; margin-bottom:0;}
 #footer li {float:left; list-style-type:none;}
 #footer li li {float:none; clear:both; width:120px; padding:2px 0; margin-right:2px;}
+#footer a {color:#666666;}
 #footer p {margin-top:4px; text-align:center; font-size:12px;}
 #footer .separator {opacity:0.3; margin:0 10px;}
 
