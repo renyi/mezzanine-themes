@@ -35,3 +35,13 @@
     margin: 0 5px;
     color: #999999;
 }
+
+/* Footer */
+
+#footer {background:rgba(220,220,220, 0.1); padding:10px 0; text-align:center;}
+#footer ul {text-align:left; display:inline-block; width:auto;}
+#footer li {float:left; list-style-type:none;}
+#footer li li {float:none; clear:both; width:120px; padding:2px 0; margin-right:2px;}
+#footer p {margin-top:4px; text-align:center; font-size:12px;}
+#footer .separator {opacity:0.3; margin:0 10px;}
+
