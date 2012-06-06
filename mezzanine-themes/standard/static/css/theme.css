@@ -22,6 +22,11 @@ body {
     color: #333333;
 }
 
+.site-title:hover {
+    text-decoration: none;
+    color: #333333;
+}
+
 #user-info {
     text-align: right;
 }
