@@ -46,6 +46,25 @@ body {
     margin-bottom: 0px;
 }
 
+.nav-tabs {
+    border-bottom: 2px solid #333333;
+}
+
+.nav-tabs > li {
+    margin-bottom: 0px;
+}
+
+.nav-tabs > li > a {
+    font-family: Georgia;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    line-height: 18px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
 /* Breadcrumb */
 
 .breadcrumb-custom {
