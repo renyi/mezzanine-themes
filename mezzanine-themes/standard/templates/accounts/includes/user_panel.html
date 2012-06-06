@@ -13,7 +13,7 @@
     <a href="{{ settings.LOGOUT_URL }}?next={{ request.path }}"
         >{% trans "Log out" %}</a>
 {% else %}
-    {% trans "Welcome" %}, Guest!<br />
+    {% trans "Welcome" %}, {% trans "Guest" %}!<br />
     <a href="{% url login %}?next={{ request.path }}">
     {% trans "Log in" %}</a> / 
     <a href="{% url signup %}?next={{ request.path }}">
