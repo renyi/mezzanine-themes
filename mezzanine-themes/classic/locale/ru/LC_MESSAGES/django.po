@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-07 02:49+0400\n"
+"POT-Creation-Date: 2012-06-07 15:20+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,30 +21,6 @@ msgstr ""
 #: templates/base.html:63
 msgid "Search"
 msgstr "Поиск"
-
-#: templates/base.html:117
-msgid "Company Name"
-msgstr "Название организации"
-
-#: templates/base.html:117
-msgid "development and design by"
-msgstr "разработка и дизайн"
-
-#: templates/base.html:120
-msgid "Powered by"
-msgstr "Сайт использует"
-
-#: templates/base.html:123
-msgid "and"
-msgstr "и"
-
-#: templates/base.html:126
-msgid "Theme by"
-msgstr "Тема"
-
-#: templates/base.html:129
-msgid "View Mobile Site"
-msgstr "Просмотр мобильной версии"
 
 #: templates/index.html:5 templates/pages/menus/dropdown.html:10
 msgid "Home"
@@ -82,3 +58,24 @@ msgstr "Вход"
 #: templates/accounts/includes/user_panel.html:20
 msgid "Sign up"
 msgstr "Регистрация"
+
+#: templates/includes/footer_powered.html:2
+msgid "Powered by"
+msgstr "Сайт использует"
+
+#: templates/includes/footer_powered.html:5
+msgid "and"
+msgstr "и"
+
+#: templates/includes/footer_powered.html:8
+msgid "Theme by"
+msgstr "Тема"
+
+#: templates/includes/footer_powered.html:11
+msgid "View Mobile Site"
+msgstr "Просмотр мобильной версии"
+
+#: templates/includes/footer_text.html:2
+msgid "All rights reserved"
+msgstr "Все права защищены"
+
