@@ -114,20 +114,10 @@ $(function() {
 <div id="footer-line" class="container">
     <div class="row">
     <div class="span6">
-    (c) 2012, {% trans "Company Name" %}, {% trans "development and design by" %} Name
+    {% include "includes/footer_text.html" %}
     </div>
     <div id="footer-powered" class="span6">
-    {% trans "Powered by" %}
-    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-    <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
-    {% trans "and" %}
-    <a href="http://www.djangoproject.com">Django</a>
-    <span class="separator">|</span>
-    {% trans "Theme by" %} <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>
-    {% ifinstalled mezzanine.mobile %}
-    <span class="separator">|</span>
-    <a href="{% url set_device "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-    {% endifinstalled %}
+    {% include "includes/footer_powered.html" %}
     <a onclick="scrollToTop();return false;" href="#"><i class="icon-arrow-up"></i></a>
     </div>
     </div>
