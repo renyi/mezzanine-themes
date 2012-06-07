@@ -49,8 +49,11 @@ $(function() {
 <div id="header" class="container">
     <div class="row">
         <div id="site-info" class="span6">
-            {% if settings.SITE_TITLE %}<div class="site-title"><a href="/">{{ settings.SITE_TITLE }}</a></div>{% endif %}
-            {% if settings.SITE_TAGLINE %}<div class="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
+            <div id="site-logo"><a href="/"><img src="{{ STATIC_URL }}img/logo.png" /></a></div>
+            <div id="site-titles">
+            {% if settings.SITE_TITLE %}<div id="site-title"><a href="/">{{ settings.SITE_TITLE }}</a></div>{% endif %}
+            {% if settings.SITE_TAGLINE %}<div id="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
+            </div>
         </div>
         <div id="user-info" class="span6">
             {% nevercache %}
@@ -108,10 +111,12 @@ $(function() {
 </div>
 </div>
 
-<div id="footer" class="container">
-{% page_menu "pages/menus/footer.html" %}
-<br style="clear:both">
-<p>
+<div id="footer-line" class="container">
+    <div class="row">
+    <div class="span6">
+    (c) 2012, {% trans "Company Name" %}, {% trans "development and design by" %} Name
+    </div>
+    <div id="footer-powered" class="span6">
     {% trans "Powered by" %}
     <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
     <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
@@ -123,7 +128,13 @@ $(function() {
     <span class="separator">|</span>
     <a href="{% url set_device "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
     {% endifinstalled %}
-</p>
+    <a onclick="scrollToTop();return false;" href="#"><i class="icon-arrow-up"></i></a>
+    </div>
+    </div>
+</div>
+
+<div id="footer" class="container">
+    {% page_menu "pages/menus/footer.html" %}
 </div>
 
 {% include "includes/footer_scripts.html" %}
