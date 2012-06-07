@@ -1,0 +1,133 @@
+/* Html */
+
+body {
+    background: url(/static/img/bg.png) #cccccc;
+}
+
+.container {
+    background: #ffffff;
+    padding: 10px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Georgia;
+}
+
+h6 {
+    text-transform: none;
+}
+
+/* Header */
+
+#header {
+    margin-top: 10px;
+    padding-bottom: 4px;
+    background: #f5f5f5;
+}
+
+#site-logo {
+    float: left;
+    margin-left: 4px;
+    margin-right: 6px;
+}
+
+#site-logo img {
+    box-shadow: 0 0 0px #BBBBBB;
+}
+
+#site-titles {
+    margin-top: 12px;
+    margin-left: 4px;
+}
+
+#site-title {
+    font-family: Georgia;
+    font-size: 38px;
+    line-height: 32px;
+}
+
+#site-title a {
+    color: #333333;
+}
+
+#site-title a:hover {
+    text-decoration: none;
+    color: #333333;
+}
+
+#user-info {
+    text-align: right;
+}
+
+.form-search {
+    margin: 4px 0 4px;
+}
+
+/* Navigation */
+
+#navigation {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 2px solid #333333;
+}
+
+.nav {
+    margin-bottom: 0px;
+}
+
+.nav-tabs {
+    border-bottom: 0px;
+}
+
+.nav-tabs > li {
+    margin-bottom: 0px;
+}
+
+.nav-tabs > li > a {
+    font-family: Georgia;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0px solid transparent;
+    border-radius: 4px 4px 0 0;
+    line-height: 18px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu {
+    border-width: 1px;
+    margin-top: 0px;
+}
+
+/* Breadcrumb */
+
+.breadcrumb-custom {
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+}
+
+.breadcrumb-custom li {
+    display: inline-block;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.breadcrumb-custom .divider {
+    margin: 0 5px;
+    color: #999999;
+}
+
+/* Footer */
+
+#footer-line {background:#cccccc; color:#666666;}
+#footer-line a {color:#666666; text-decoration:underline;}
+#footer-line .icon-arrow-up {opacity:0.7; margin-left:4px;}
+#footer-powered {text-align:right;}
+#footer {background:#f9f9f9; text-align:center;}
+#footer ul {text-align:left; display:inline-block; width:auto; margin-top:0; margin-bottom:0;}
+#footer li {float:left; list-style-type:none;}
+#footer li li {float:none; clear:both; width:120px; padding:2px 0; margin-right:2px;}
+#footer a {color:#666666;}
+#footer p {margin-top:4px; text-align:center; font-size:12px;}
+#footer .separator {opacity:0.3; margin:0 10px;}
+
