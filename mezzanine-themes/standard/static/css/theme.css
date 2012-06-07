@@ -75,6 +75,10 @@ h6 {
     margin-bottom: 0px;
 }
 
+.nav-tabs {
+    border-bottom: 0px;
+}
+
 .nav-tabs > li {
     margin-bottom: 0px;
 }
@@ -88,6 +92,11 @@ h6 {
     line-height: 18px;
     padding-bottom: 8px;
     padding-top: 8px;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu {
+    border-width: 1px;
+    margin-top: 0px;
 }
 
 /* Breadcrumb */
