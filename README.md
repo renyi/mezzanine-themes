@@ -11,9 +11,9 @@ Usage
 It is recommended to place the themes as high as possible, to make sure all the app templates are overridden.
 
     INSTALLED_APPS = (
-        'mezzanine-themes.my_awesome_theme_child',
-        'mezzanine-themes.my_awesome_theme',
-        'mezzanine-themes.mezzanine_default',
+        'mezzanine_themes.my_awesome_theme_child',
+        'mezzanine_themes.my_awesome_theme',
+        'mezzanine_themes.mezzanine_default',
         ...
     )
 
