@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 
-{% load i18n %}
+{% load i18n mezzanine_tags %}
 
-{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block full_meta_title %}
+{% if settings.SITE_TITLE %}{{ settings.SITE_TITLE }}
+{% if settings.SITE_TAGLINE %} - {{ settings.SITE_TAGLINE }}{% endif %}
+{% else %}{% trans "Home" %}{% endif %}
+{% endblock %}
 
 {% block title %}
 
