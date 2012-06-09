@@ -72,9 +72,6 @@ $(function() {
 </div>
 
 <div id="main" class="container">
-<div class="row">
-
-<div class="span9 middle">
 
     {% nevercache %}
     {% for message in messages %}
@@ -84,32 +81,39 @@ $(function() {
     {% endfor %}
     {% endnevercache %}
 
-    <ul class="breadcrumb-custom">
-    {% spaceless %}
-    {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-    {% endspaceless %}
-    </ul>
+    {% block full %}
+    <div class="row">
 
-    <h1>{% block title %}{% endblock %}</h1>
+        <div class="span9 middle">
 
-    {% block main %}{% endblock %}
+            <ul class="breadcrumb-custom">
+            {% spaceless %}
+            {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+            {% endspaceless %}
+            </ul>
 
-</div>
+            <h1>{% block title %}{% endblock %}</h1>
 
-<div class="span3 right">
+            {% block main %}{% endblock %}
 
-    <div class="panel">
-    {% block right_panel %}
-    {% ifinstalled mezzanine.twitter %}
-    {% include "twitter/tweets.html" %}
-    {% endifinstalled %}
+        </div>
+
+        <div class="span3 right">
+
+            <div class="panel">
+            {% block right_panel %}
+            {% ifinstalled mezzanine.twitter %}
+            {% include "twitter/tweets.html" %}
+            {% endifinstalled %}
+            {% endblock %}
+            </div>
+
+        </div>
+
+    </div><!-- /row -->
     {% endblock %}
-    </div>
 
-</div>
-
-</div>
-</div>
+</div><!-- /container #main -->
 
 <div id="footer-line" class="container">
     <div class="row">
