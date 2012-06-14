@@ -1,8 +1,8 @@
-{% load mezzanine_tags shop_tags i18n %}
+{% load mezzanine_tags shop_tags i18n include_strip %}
 <div id="user-welcome">
 {% spaceless %}
 {% trans "Welcome" %}{% ifinstalled mezzanine.accounts %}, 
-{% include "accounts/includes/user_welcome.html" %}{% endifinstalled %}!
+{% include_strip "accounts/includes/user_welcome.html" %}{% endifinstalled %}!
 {% endspaceless %}
 </div>
 {% spaceless %}
