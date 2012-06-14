@@ -1,9 +1,10 @@
 {% load mezzanine_tags shop_tags i18n %}
-{% ifinstalled mezzanine.accounts %}
 <div id="user-welcome">
-{% include "accounts/includes/user_welcome.html" %}
+{% spaceless %}
+{% trans "Welcome" %}{% ifinstalled mezzanine.accounts %}, 
+{% include "accounts/includes/user_welcome.html" %}{% endifinstalled %}!
+{% endspaceless %}
 </div>
-{% endifinstalled %}
 {% spaceless %}
 <div id="user-links">
     {% with request.cart.total_quantity as cart_quantity %}
@@ -12,10 +13,10 @@
     {% endwith %}
     <a href="{% url shop_wishlist %}">{% trans "My Wishlist" %} 
     {% with request.wishlist|length as wishlist_count %}
-    ({% if wishlist_count %}{{ wishlist_count }}{% else %}0{% endif %})</a> | 
+    ({% if wishlist_count %}{{ wishlist_count }}{% else %}0{% endif %})</a>
     {% endwith %}
     {% ifinstalled mezzanine.accounts %}
-    {% include "accounts/includes/user_panel.html" %}
+     | {% include "accounts/includes/user_panel.html" %}
     {% endifinstalled %}
 </div>
 {% endspaceless %}
