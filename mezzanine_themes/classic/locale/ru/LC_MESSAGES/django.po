@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-07 15:20+0400\n"
+"POT-Creation-Date: 2012-06-14 09:07+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,42 +22,50 @@ msgstr ""
 msgid "Search"
 msgstr "Поиск"
 
-#: templates/index.html:5 templates/pages/menus/dropdown.html:10
+#: templates/index.html:8 templates/pages/menus/dropdown.html:10
 msgid "Home"
 msgstr "Главная"
 
-#: templates/index.html:16 templates/accounts/includes/user_panel.html:4
-#: templates/accounts/includes/user_panel.html:16
+#: templates/index.html:20 templates/accounts/includes/user_welcome.html:3
 msgid "Welcome"
 msgstr "Добро пожаловать"
 
-#: templates/index.html:28
+#: templates/index.html:32
 msgid "About"
 msgstr "О нас"
 
-#: templates/index.html:30
+#: templates/index.html:34
 msgid "Links"
 msgstr "Ссылки"
 
-#: templates/accounts/includes/user_panel.html:9
+#: templates/accounts/includes/user_panel.html:4
 msgid "Update profile"
 msgstr "Обновить профиль"
 
-#: templates/accounts/includes/user_panel.html:14
+#: templates/accounts/includes/user_panel.html:6
+#: templates/admin/includes_grappelli/header.html:34
 msgid "Log out"
 msgstr "Выход"
 
-#: templates/accounts/includes/user_panel.html:16
-msgid "Guest"
-msgstr "Гость"
+#: templates/accounts/includes/user_panel.html:9
+msgid "Sign up"
+msgstr "Регистрация"
 
-#: templates/accounts/includes/user_panel.html:18
+#: templates/accounts/includes/user_panel.html:11
 msgid "Log in"
 msgstr "Вход"
 
-#: templates/accounts/includes/user_panel.html:20
-msgid "Sign up"
-msgstr "Регистрация"
+#: templates/accounts/includes/user_welcome.html:12
+msgid "Guest"
+msgstr "Гость"
+
+#: templates/admin/includes_grappelli/header.html:17
+msgid "Documentation"
+msgstr "Документация"
+
+#: templates/admin/includes_grappelli/header.html:26
+msgid "Change password"
+msgstr "Смена пароля"
 
 #: templates/includes/footer_powered.html:2
 msgid "Powered by"
@@ -79,3 +87,10 @@ msgstr "Просмотр мобильной версии"
 msgid "All rights reserved"
 msgstr "Все права защищены"
 
+#: templates/includes/user_panel.html:9
+msgid "My Cart"
+msgstr "Моя корзина"
+
+#: templates/includes/user_panel.html:11
+msgid "My Wishlist"
+msgstr "Мои желания"
