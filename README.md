@@ -68,8 +68,11 @@ You'll notice that there are no *.py files in the themes. I prefer it this way, 
 
 Release Notes
 ---
-2012-06-05: Updated templates to mezzanine 1.1.
-2012-03-08:  First release. Examples coming soon.
+08-03-2012:  First release. Examples coming soon.
+
+05-06-2012: Updated detaulf templates to Mezzanine 1.1 templates.
+
+06-06-2012: Added Classic theme. (Thanks to Dmitry Falk !)
 
 Contributors
 ---
