@@ -20,7 +20,6 @@
         {% endwith %}
     {% endifinstalled %}
     {% ifinstalled mezzanine.accounts %}
-        {% ifinstalled cartridge.shop %} | {% endifinstalled %}
         {% include "accounts/includes/user_panel.html" %}
     {% endifinstalled %}
 </div>
