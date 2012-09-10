@@ -6,6 +6,7 @@ mezzanine_default and mezzanine_mobile are compilation of all the templates from
 
 Inspired by Pinax themes.
 
+
 Usage
 ---
 It is recommended to place the themes as high as possible, to make sure all the app templates are overridden.
@@ -16,6 +17,7 @@ It is recommended to place the themes as high as possible, to make sure all the 
         'mezzanine_themes.mezzanine_default',
         ...
     )
+
 
 Creating your own theme
 ---
@@ -53,10 +55,10 @@ To override Django App templates, just copy the templates into the theme's `temp
 This overiding structure also helps to organize static files as you don't need duplicate
 javacripts or css scripts to the child templates.
 
-    my_awesome_theme/ 
+    my_awesome_theme/
         - static/
             - js/
-    
+
     base_theme/
         - static/
             - js/
@@ -66,24 +68,30 @@ From here, the jquery.min.js library in base_theme will also be available to my_
 
 You'll notice that there are no *.py files in the themes. I prefer it this way, so it looks less scrary when we assign designers to work on the theme. =)
 
+
 Release Notes
 ---
 08-03-2012:  First release. Examples coming soon.
 
-05-06-2012: Updated detaulf templates to Mezzanine 1.1 templates.
+05-06-2012: Updated default templates to Mezzanine 1.1 templates.
 
 06-06-2012: Added Classic theme. (Thanks to Dmitry Falk !)
+
+10-09-2012: Updated default templates to Mezzanine 1.2.4 templates.
+
+11-09-2012: Added html5_boilerplate theme.
+
 
 Contributors
 ---
 If you have a theme you'd like to share, just send a pull request.
-    
+
     Renyi Khor (https://github.com/renyi)
     Dmitry Falk (https://github.com/dfalk)
+
 
 External Links
 ---
     [1] Django: <https://www.djangoproject.com/>
     [2] Mezzanine: <http://mezzanine.jupo.org/>
     [3] Pinax Project: <http://pinaxproject.com/>
-

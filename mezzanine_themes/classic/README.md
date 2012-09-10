@@ -10,4 +10,3 @@
 - navigation bar
 - 2 columns layout
 - footer text based on includes
-
