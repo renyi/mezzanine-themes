@@ -71,7 +71,7 @@ You'll notice that there are no *.py files in the themes. I prefer it this way, 
 
 Release Notes
 ---
-08-03-2012:  First release. Examples coming soon.
+08-03-2012: First release. Examples coming soon.
 
 05-06-2012: Updated default templates to Mezzanine 1.1 templates.
 
