@@ -8,7 +8,8 @@
 <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <title>{% block full_meta_title %}{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}{% endblock %}</title>
-<link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
+<link rel="icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
 
 {% ifinstalled mezzanine.blog %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url blog_post_feed "rss" %}">
