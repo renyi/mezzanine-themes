@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% load i18n mezzanine_tags %}
+
+{% block full_meta_title %}
+{% if settings.SITE_TITLE %}{{ settings.SITE_TITLE }}
+{% if settings.SITE_TAGLINE %} - {{ settings.SITE_TAGLINE }}{% endif %}
+{% else %}{% trans "Home" %}{% endif %}
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block breadcrumb_menu %}
+
+{% endblock %}
+
+{% block full %}
+<div id="topblock" class="row">
+
+<div id="toptext" class="span6 left">
+
+    <h1>{% trans "Best company slogan is here!" %}</h1>
+    <ul id="toplist">
+    <li>Li Europan lingues es membres del sam familie.</li>
+    <li>Por scientie, musica, sport etc, li tot Europa usa li sam vocabularium.
+    <li>Li lingues differe solmen in li grammatica.</li>
+    <li>Lor separat existentie es un myth.</li>
+    </ul>
+
+</div>
+
+<div class="span6 right">
+    <img class="thumbnail" src="http://ipsumimage.appspot.com/440x240" />
+</div>
+
+</div><!-- /row -->
+
+<div class="row">
+
+<div class="span4">
+
+    <h2>Topic</h2>
+    <p>Aliquam aliquam laoreet eleifend. Nulla ac risus sed nisi rutrum facilisis. Nulla pharetra leo egestas felis porttitor ornare id at sem. Praesent vitae lorem erat, posuere iaculis dolor. Maecenas adipiscing lectus sit amet tellus lacinia nec blandit libero dignissim.</p>
+
+</div>
+<div class="span4">
+
+    <h2>Topic</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing</strong> elit. Ut interdum ultrices odio non ornare. Fusce vehicula sem sed neque porttitor pretium. Duis hendrerit nibh id dui mattis euismod. Nulla rhoncus <em>nibh pharetra</em> sem convallis tincidunt.</p>
+
+</div>
+<div class="span4">
+
+    <h2>Topic</h2>
+    <p>Aliquam aliquam laoreet eleifend. Nulla ac risus sed nisi rutrum facilisis. Nulla pharetra leo egestas felis porttitor ornare id at sem. Praesent vitae lorem erat, posuere iaculis dolor. Maecenas adipiscing lectus sit amet tellus lacinia nec blandit libero dignissim.</p>
+
+</div>
+
+</div><!-- /row -->
+
+{% endblock %}

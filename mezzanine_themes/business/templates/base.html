@@ -56,20 +56,10 @@ $(function() {
             {% if settings.SITE_TAGLINE %}<div id="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
             </div>
         </div>
-        <div id="user-info" class="span6">
-            {% nevercache %}
-            {% include "includes/user_panel.html" %}
-            {% endnevercache %}
-            <form action="{% url search %}" class="form-search">
-            <input class="input-medium" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
-            <button class="btn btn-small" type="submit"><i class="icon-search"></i></button>
-            </form>
+        <div id="navigation" class="span6">
+            {% page_menu "pages/menus/dropdown.html" %}
         </div>
     </div>
-</div>
-
-<div id="navigation" class="container">
-    {% page_menu "pages/menus/dropdown.html" %}
 </div>
 
 <div id="main" class="container">

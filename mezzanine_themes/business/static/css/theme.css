@@ -29,6 +29,7 @@ h6 {
     float: left;
     margin-left: 4px;
     margin-right: 6px;
+    margin-bottom: 10px;
 }
 
 #site-logo img {
@@ -66,37 +67,42 @@ h6 {
 /* Navigation */
 
 #navigation {
-    padding-top: 0px;
+    padding-top: 15px;
     padding-bottom: 0px;
-    border-bottom: 2px solid #333333;
 }
 
 .nav {
     margin-bottom: 0px;
 }
 
-.nav-tabs {
+.nav-pills {
     border-bottom: 0px;
 }
 
-.nav-tabs > li {
+.nav-pills > li {
     margin-bottom: 0px;
 }
 
-.nav-tabs > li > a {
+.nav-pills > li > a {
     font-family: Georgia;
     font-size: 16px;
     font-weight: bold;
     border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px;
     line-height: 18px;
     padding-bottom: 8px;
     padding-top: 8px;
 }
 
-.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu {
+.nav-pills .dropdown-menu, .nav-pills .dropdown-menu {
     border-width: 1px;
     margin-top: 0px;
+}
+
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    background-color: #EEEEEE;
+    color: #333333;
 }
 
 /* Breadcrumb */
@@ -115,6 +121,27 @@ h6 {
 .breadcrumb-custom .divider {
     margin: 0 5px;
     color: #999999;
+}
+
+/* Index */
+
+#toptext {
+    margin-top: 30px;
+}
+
+#topblock {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#toplist {
+    margin-top: 16px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#toplist li {
+    margin-bottom: 6px;
 }
 
 /* Footer */

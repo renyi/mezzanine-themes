@@ -1,0 +1,26 @@
+{% load mezzanine_tags i18n include_strip %}
+<div id="user-welcome">
+{% spaceless %}
+{% trans "Welcome" %}{% ifinstalled mezzanine.accounts %}, 
+{% include_strip "accounts/includes/user_welcome.html" %}{% endifinstalled %}!
+{% endspaceless %}
+</div>
+{% spaceless %}
+<div id="user-links">
+    &nbsp;
+    {% ifinstalled cartridge.shop %}
+        {% load shop_tags %}
+        {% with request.cart.total_quantity as cart_quantity %}
+        <a href="{% url shop_cart %}">{% trans "My Cart" %} 
+        ({% if cart_quantity %}{{ cart_quantity }}{% else %}0{% endif %})</a> | 
+        {% endwith %}
+        <a href="{% url shop_wishlist %}">{% trans "My Wishlist" %} 
+        {% with request.wishlist|length as wishlist_count %}
+        ({% if wishlist_count %}{{ wishlist_count }}{% else %}0{% endif %})</a>
+        {% endwith %}
+    {% endifinstalled %}
+    {% ifinstalled mezzanine.accounts %}
+        {% include "accounts/includes/user_panel.html" %}
+    {% endifinstalled %}
+</div>
+{% endspaceless %}
