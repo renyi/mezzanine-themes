@@ -1,0 +1,60 @@
+{% extends "admin/base.html" %}
+{% load mezzanine_tags i18n %}
+{% comment %}
+
+This file contains a handful of unrelated admin customizations that
+mostly get applied globally to different parts of the admin.
+
+  * Global CSS fixes (when logged in)
+  * Javascript and HTML for injecting Mezzanine's menu into the top of
+    every page
+  * Javascript for fixing inlines to work with Mezzanine's dynamic inlines
+
+{% endcomment %}
+
+{% block title %}{{ title }} | {{ settings.SITE_TITLE }}{% endblock %}
+{% block branding %}<h1 id="site-name">{{ settings.SITE_TITLE %}</h1>{% endblock %}
+{% block nav-global %}{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{{ STATIC_URL }}mezzanine/css/admin/global.css">
+<style>
+/*
+These are set in PageAdmin's view methods,
+and mezzanine.core.admin.SingletonAdmin
+*/
+{% if hide_delete_link or singleton %}.deletelink {display:none !important;}{% endif %}
+{% if hide_slug_field %}.slug {display:none !important;}{% endif %}
+{% if singleton %}.change-view-save-another {display:none !important;}{% endif %}
+</style>
+<script>
+{% url static_proxy as static_proxy_url %}
+{% url fb_browse as fb_browse_url %}
+{% url admin:index as admin_index_url %}
+window.__home_link = '<a href="{% url home %}">{% trans "View site" %}</a>';
+window.__csrf_token = '{{ csrf_token }}';
+window.__admin_keywords_submit_url = '{% url admin_keywords_submit %}';
+window.__filebrowser_url = '{{ fb_browse_url }}';
+window.__admin_url = '{{ admin_index_url }}';
+window.__static_proxy = '{{ static_proxy_url }}';
+window.__admin_media_prefix__ = '{{ settings.ADMIN_MEDIA_PREFIX }}';
+window.__grappelli_installed = {{ settings.GRAPPELLI_INSTALLED|lower }};
+</script>
+{% if not settings.GRAPPELLI_INSTALLED %}
+<script src="{{ STATIC_URL }}mezzanine/js/{{ settings.JQUERY_FILENAME }}"></script>
+{% endif %}
+{% endblock %}
+
+{% block footer %}
+{{ block.super }}
+{% if request.user.is_staff %}
+    {% if not is_popup and not request.GET.pop %}
+    <script src="{{ STATIC_URL }}mezzanine/js/admin/navigation.js"></script>
+    {% endif %}
+    <script src="{{ STATIC_URL }}mezzanine/js/admin/ajax_csrf.js"></script>
+    <script src="{{ STATIC_URL }}mezzanine/js/admin/collapse_backport.js"></script>
+    {% admin_dropdown_menu %}
+{% else %}
+    <script src="{{ STATIC_URL }}mezzanine/js/admin/login.js"></script>
+{% endif %}
+{% endblock %}

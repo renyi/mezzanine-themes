@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load i18n mezzanine_tags %}
+
+{% block full_meta_title %}
+{% if settings.SITE_TITLE %}{{ settings.SITE_TITLE }}
+{% if settings.SITE_TAGLINE %} - {{ settings.SITE_TAGLINE }}{% endif %}
+{% else %}{% trans "Home" %}{% endif %}
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block breadcrumb_menu %}
+
+{% endblock %}
+
+{% block main %}
+<h2>{% trans "Welcome" %}</h2>
+<p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing</strong> elit. Ut interdum ultrices odio non ornare. Fusce vehicula sem sed neque porttitor pretium. Duis hendrerit nibh id dui mattis euismod. Nulla rhoncus <em>nibh pharetra</em> sem convallis tincidunt. Aliquam aliquam laoreet eleifend. Nulla ac risus sed nisi rutrum facilisis. Nulla pharetra leo egestas felis porttitor ornare id at sem. Praesent vitae lorem erat, posuere iaculis dolor. Maecenas adipiscing lectus sit amet tellus lacinia nec blandit libero dignissim.</p>
+
+<p><ul class="thumbnails">
+<li><img class="thumbnail" src="http://ipsumimage.appspot.com/140x100" /></li>
+<li><img class="thumbnail" src="http://ipsumimage.appspot.com/140x100" /></li>
+</ul></p>
+
+<p>Nam eget luctus nunc. Vivamus mollis convallis tortor vitae convallis. Donec posuere tincidunt augue, ut tristique felis porta quis. Duis eget neque neque, mattis porta ligula. Fusce a dolor id dui commodo varius. Pellentesque imperdiet purus eu sapien vulputate at auctor dui porta. Vestibulum diam elit, pulvinar ut vestibulum et, rhoncus non lorem. Mauris ac ullamcorper dui. Vivamus dictum elit non nibh gravida blandit. Duis mi lectus, sagittis a pretium nec, gravida quis tortor. Fusce velit lectus, aliquam non sodales vel, euismod sed lectus.</p>
+{% endblock %}
+
+{% block right_panel %}
+<h3>{% trans "About" %}</h3>
+<p>Aliquam aliquam laoreet eleifend. Nulla ac risus sed nisi rutrum facilisis. Nulla pharetra leo egestas felis porttitor ornare id at sem. Praesent vitae lorem erat, posuere iaculis dolor.</p>
+<h3>{% trans "Links" %}</h3>
+<ul class="unstyled">
+<li><a href="http://google.com">Google</a></li>
+<li><a href="http://facebook.com">Facebook</a></li>
+<li><a href="http://twitter.com">Twitter</a></li>
+<li><a href="http://linkedin.com">LinkedIn</a></li>
+</ul>
+{% endblock %}

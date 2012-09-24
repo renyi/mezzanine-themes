@@ -1,0 +1,12 @@
+{% load i18n mezzanine_tags %}
+
+{% if request.user.is_authenticated %}
+    {% url profile user.username as profile_url %}
+    {% if profile_url %}<a href="{{ profile_url }}"
+        >{{ request.user.username }}</a>
+    {% else %}<a href="{% url profile_update %}"
+        >{{ request.user.username }}</a>
+    {% endif %}
+{% else %}
+    {% trans "Guest" %}
+{% endif %}

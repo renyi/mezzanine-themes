@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load pages_tags mezzanine_tags i18n %}
+<html>
+<head>
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+<meta name="description" content="{% block meta_description %}{% endblock %}">
+<title>{% block full_meta_title %}{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}{% endblock %}</title>
+<link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
+<link rel="icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
+
+{% ifinstalled mezzanine.blog %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url blog_post_feed "rss" %}">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url blog_post_feed "atom" %}">
+{% endifinstalled %}
+
+{% compress css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.responsive.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/mezzanine.css">
+{% ifinstalled cartridge.shop %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/cartridge.css">
+{% endifinstalled %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/theme.css">
+{% block extra_css %}{% endblock %}
+{% endcompress %}
+
+{% compress js %}
+<script src="{{ STATIC_URL }}mezzanine/js/{{ settings.JQUERY_FILENAME }}"></script>
+<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+<script>
+$(function() {
+    $('.middleinput:text, textarea').addClass('xlarge');
+    $('.control-group label').addClass('control-label');
+});
+</script>
+{% block extra_js %}{% endblock %}
+{% endcompress %}
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+{% block extra_head %}{% endblock %}
+
+</head>
+<body id="{% block body_id %}body{% endblock %}">
+
+<div id="header" class="container">
+    <div class="row">
+        <div id="site-info" class="span6">
+            <div id="site-logo"><a href="/"><img src="{{ STATIC_URL }}img/logo.png" /></a></div>
+            <div id="site-titles">
+            {% if settings.SITE_TITLE %}<div id="site-title"><a href="/">{{ settings.SITE_TITLE }}</a></div>{% endif %}
+            {% if settings.SITE_TAGLINE %}<div id="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
+            </div>
+        </div>
+        <div id="navigation" class="span6">
+            {% page_menu "pages/menus/dropdown.html" %}
+        </div>
+    </div>
+</div>
+
+<div id="main" class="container">
+
+    {% nevercache %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" data-alert="alert">
+    <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
+    </div>
+    {% endfor %}
+    {% endnevercache %}
+
+    {% block full %}
+    <div class="row">
+
+        <div class="span9 middle">
+
+            <ul class="breadcrumb-custom">
+            {% spaceless %}
+            {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+            {% endspaceless %}
+            </ul>
+
+            <h1>{% block title %}{% endblock %}</h1>
+
+            {% block main %}{% endblock %}
+
+        </div>
+
+        <div class="span3 right">
+
+            <div class="panel">
+            {% block right_panel %}
+            {% ifinstalled mezzanine.twitter %}
+            {% include "twitter/tweets.html" %}
+            {% endifinstalled %}
+            {% endblock %}
+            </div>
+
+        </div>
+
+    </div><!-- /row -->
+    {% endblock %}
+
+</div><!-- /container #main -->
+
+<div id="footer-line" class="container">
+    <div class="row">
+    <div class="span6">
+    {% include "includes/footer_text.html" %}
+    </div>
+    <div id="footer-powered" class="span6">
+    {% include "includes/footer_powered.html" %}
+    <a onclick="scrollToTop();return false;" href="#"><i class="icon-arrow-up"></i></a>
+    </div>
+    </div>
+</div>
+
+<div id="footer" class="container">
+    {% page_menu "pages/menus/footer.html" %}
+</div>
+
+{% include "includes/footer_scripts.html" %}
+
+</body>
+</html>
