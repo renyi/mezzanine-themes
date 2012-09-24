@@ -16,26 +16,48 @@
 
 {% endblock %}
 
-{% block main %}
-<h2>{% trans "Welcome" %}</h2>
-<p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing</strong> elit. Ut interdum ultrices odio non ornare. Fusce vehicula sem sed neque porttitor pretium. Duis hendrerit nibh id dui mattis euismod. Nulla rhoncus <em>nibh pharetra</em> sem convallis tincidunt. Aliquam aliquam laoreet eleifend. Nulla ac risus sed nisi rutrum facilisis. Nulla pharetra leo egestas felis porttitor ornare id at sem. Praesent vitae lorem erat, posuere iaculis dolor. Maecenas adipiscing lectus sit amet tellus lacinia nec blandit libero dignissim.</p>
+{% block full %}
+<div id="topblock" class="row">
 
-<p><ul class="thumbnails">
-<li><img class="thumbnail" src="http://ipsumimage.appspot.com/140x100" /></li>
-<li><img class="thumbnail" src="http://ipsumimage.appspot.com/140x100" /></li>
-</ul></p>
+<div id="toptext" class="span6 left">
 
-<p>Nam eget luctus nunc. Vivamus mollis convallis tortor vitae convallis. Donec posuere tincidunt augue, ut tristique felis porta quis. Duis eget neque neque, mattis porta ligula. Fusce a dolor id dui commodo varius. Pellentesque imperdiet purus eu sapien vulputate at auctor dui porta. Vestibulum diam elit, pulvinar ut vestibulum et, rhoncus non lorem. Mauris ac ullamcorper dui. Vivamus dictum elit non nibh gravida blandit. Duis mi lectus, sagittis a pretium nec, gravida quis tortor. Fusce velit lectus, aliquam non sodales vel, euismod sed lectus.</p>
-{% endblock %}
+    <h1>{% trans "Best company slogan is here!" %}</h1>
+    <ul id="toplist">
+    <li>Li Europan lingues es membres del sam familie.</li>
+    <li>Por scientie, musica, sport etc, li tot Europa usa li sam vocabularium.
+    <li>Li lingues differe solmen in li grammatica.</li>
+    <li>Lor separat existentie es un myth.</li>
+    </ul>
 
-{% block right_panel %}
-<h3>{% trans "About" %}</h3>
-<p>Aliquam aliquam laoreet eleifend. Nulla ac risus sed nisi rutrum facilisis. Nulla pharetra leo egestas felis porttitor ornare id at sem. Praesent vitae lorem erat, posuere iaculis dolor.</p>
-<h3>{% trans "Links" %}</h3>
-<ul class="unstyled">
-<li><a href="http://google.com">Google</a></li>
-<li><a href="http://facebook.com">Facebook</a></li>
-<li><a href="http://twitter.com">Twitter</a></li>
-<li><a href="http://linkedin.com">LinkedIn</a></li>
-</ul>
+</div>
+
+<div class="span6 right">
+    <img class="thumbnail" src="http://ipsumimage.appspot.com/440x240" />
+</div>
+
+</div><!-- /row -->
+
+<div class="row">
+
+<div class="span4">
+
+    <h2>Topic</h2>
+    <p>Aliquam aliquam laoreet eleifend. Nulla ac risus sed nisi rutrum facilisis. Nulla pharetra leo egestas felis porttitor ornare id at sem. Praesent vitae lorem erat, posuere iaculis dolor. Maecenas adipiscing lectus sit amet tellus lacinia nec blandit libero dignissim.</p>
+
+</div>
+<div class="span4">
+
+    <h2>Topic</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing</strong> elit. Ut interdum ultrices odio non ornare. Fusce vehicula sem sed neque porttitor pretium. Duis hendrerit nibh id dui mattis euismod. Nulla rhoncus <em>nibh pharetra</em> sem convallis tincidunt.</p>
+
+</div>
+<div class="span4">
+
+    <h2>Topic</h2>
+    <p>Aliquam aliquam laoreet eleifend. Nulla ac risus sed nisi rutrum facilisis. Nulla pharetra leo egestas felis porttitor ornare id at sem. Praesent vitae lorem erat, posuere iaculis dolor. Maecenas adipiscing lectus sit amet tellus lacinia nec blandit libero dignissim.</p>
+
+</div>
+
+</div><!-- /row -->
+
 {% endblock %}

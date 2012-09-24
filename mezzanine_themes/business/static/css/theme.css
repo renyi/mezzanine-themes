@@ -123,6 +123,27 @@ h6 {
     color: #999999;
 }
 
+/* Index */
+
+#toptext {
+    margin-top: 30px;
+}
+
+#topblock {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#toplist {
+    margin-top: 16px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#toplist li {
+    margin-bottom: 6px;
+}
+
 /* Footer */
 
 #footer-line {background:#cccccc; color:#666666;}
