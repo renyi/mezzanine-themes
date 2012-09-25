@@ -2,6 +2,9 @@
 
 Compatible with Mezzanine 1.2.4
 
+### Preview
+
+![](http://github.com/dfalk/mezzanine-themes/raw/master/mezzanine_themes/business/preview/preview.gif)
 
 ### Features
 
