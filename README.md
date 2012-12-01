@@ -71,15 +71,17 @@ You'll notice that there are no *.py files in the themes. I prefer it this way, 
 
 Release Notes
 ---
-08-03-2012: First release. Examples coming soon.
+25-09-2012: Added business theme by Dmitry Falk.
 
-05-06-2012: Updated default templates to Mezzanine 1.1 templates.
-
-06-06-2012: Added Classic theme. (Thanks to Dmitry Falk !)
+11-09-2012: Added html5_boilerplate theme by Renyi Khor.
 
 10-09-2012: Updated default templates to Mezzanine 1.2.4 templates.
 
-11-09-2012: Added html5_boilerplate theme.
+06-06-2012: Added Classic theme by Dmitry Falk.
+
+05-06-2012: Updated default templates to Mezzanine 1.1 templates.
+
+08-03-2012: First release. Examples coming soon.
 
 
 Contributors
@@ -88,6 +90,7 @@ If you have a theme you'd like to share, just send a pull request.
 
     Renyi Khor (https://github.com/renyi)
     Dmitry Falk (https://github.com/dfalk)
+    Glen (https://github.com/iepathos)
 
 
 External Links
