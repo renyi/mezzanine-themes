@@ -71,6 +71,8 @@ You'll notice that there are no *.py files in the themes. I prefer it this way, 
 
 Release Notes
 ---
+11-02-2013: Updated default templates to Mezzanine 1.3.0 templates.
+
 25-09-2012: Added business theme by Dmitry Falk.
 
 11-09-2012: Added html5_boilerplate theme by Renyi Khor.

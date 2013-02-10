@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='mezzanine-themes',
-    version='0.2',
+    version='0.3',
     description='Mezzanine CMS themes',
     author='Renyi Khor',
     author_email='renyi.ace@gmail.com',
