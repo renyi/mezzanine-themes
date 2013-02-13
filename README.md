@@ -32,19 +32,19 @@ A typical theme structure would look like this,
                 - scripts.js
             - css/
                 - local.css
-        - template/
+        - templates/
             - includes/
 
 To override mezzanine_default templates, just copy the templates into the theme's `templates` directory.
 
-    template/
+    templates/
         - includes/
         - base.html
         - index.html
 
 To override Django App templates, just copy the templates into the theme's `templates` directory.
 
-    template/
+    templates/
         - admin/
             - change_form.html
             - change_list.html
