@@ -1,0 +1,22 @@
+{% overextends "base.html" %}
+{% load mezzanine_tags %}
+
+
+{% block base_styles %}
+    {% compress css %}
+    {{ block.super }}
+    {% if not USE_CDN %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome-ie7.min.css">
+    <![endif]-->
+    {% endif }
+    {% endcompress %}
+
+    {% if USE_CDN %}
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <!--[if IE 7]>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome-ie7.css" rel="stylesheet">
+    <![endif]-->
+    {% endif %}
+{% endblock %}
