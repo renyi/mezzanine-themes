@@ -1,3 +1,4 @@
 include README.md
 recursive-include mezzanine_themes *.*
+include requirements.txt
 exclude .gitignore
