@@ -1,0 +1,22 @@
+{% overextends "base.html" %}
+{% load mezzanine_tags %}
+
+
+{% block base_styles %}
+    {% compress css %}
+    {{ block.super }}
+    {% if not USE_CDN %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}fancybox/jquery.fancybox.css">
+    {% endif }
+    {% endcompress %}
+{% endblock %}
+
+
+{% block base_libs %}
+    {% compress js %}
+    {{ block.super }}
+    {% if not USE_CDN %}
+    <script src="{{ STATIC_URL }}fancybox/jquery.fancybox.js"></script>
+    {% endif %}
+    {% endcompress %}
+{% endblock %}

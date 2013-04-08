@@ -1,0 +1,20 @@
+{% overextends "base.html" %}
+{% load mezzanine_tags %}
+
+
+{% block cdn_libs %}
+    {% if USE_CDN %}
+    {{ block.super }}
+    <script src="//code.highcharts.com/highcharts.js"></script>
+    {% endif %}
+{% endblock %}
+
+
+{% block base_libs %}
+    {% compress js %}
+    {{ block.super }}
+    {% if not USE_CDN %}
+    <script src="{{ STATIC_URL }}js/highcharts.js"></script>
+    {% endif %}
+    {% endcompress %}
+{% endblock %}

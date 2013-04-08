@@ -1,0 +1,12 @@
+{% overextends "base.html" %}
+{% load mezzanine_tags %}
+
+
+{% block base_libs %}
+    {% compress js %}
+    {{ block.super }}
+    {% if not USE_CDN %}
+    <script src="{{ STATIC_URL }}js/jquery.tools.min.js"></script>
+    {% endif %}
+    {% endcompress %}
+{% endblock %}
