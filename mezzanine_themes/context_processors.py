@@ -4,9 +4,9 @@ except ImportError:
     from django.conf import settings
 
 
-def mezzanine_themes(request):
+def theme_settings(request):
     return {
-        'FAV_ICON': getattr(settings, "TEMPLATE_FAV_ICON", ""),
+        'FAV_ICON': getattr(settings, "TEMPLATE_FAV_ICON", "data:image/x-icon;base64,AAABAAEAEBACAAAAAACwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA////AIwBAACCBwAAAeEAAAHBAAA/+QAAI7kAAELtAADBywAAwXkAAMAJAADAsQAA4OMAAGOjAAB+EgAAYA4AAB/8AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA"),
         'APPLE_ICON': getattr(settings, "TEMPLATE_APPLE_ICON", ""),
         'USE_CDN': getattr(settings, "TEMPLATE_USE_CDN", False),
         'CDN_JQUERY': getattr(settings, "TEMPLATE_CDN_JQUERY", "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"),
