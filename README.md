@@ -11,12 +11,32 @@ Usage
 ---
 It is recommended to place the themes as high as possible, to make sure all the app templates are overridden.
 
-    INSTALLED_APPS = (
-        'mezzanine_themes.my_awesome_theme_child',
-        'mezzanine_themes.my_awesome_theme',
-        'mezzanine_themes.mezzanine_default',
-        ...
-    )
+    1. Add 'mezzanine_themes' to INSTALLED_APP.
+
+        INSTALLED_APPS = (
+            'mezzanine_themes.themes.my_awesome_theme_child',
+            'mezzanine_themes.themes.my_awesome_theme',
+            'mezzanine_themes',
+            ...
+        )
+
+
+    2. Add 'mezzanine_themes.context_processors.theme_settings' to TEMPLATE_CONTEXT_PROCESSORS.
+       OPTIONAL: Injects helpful context into templates.
+
+        TEMPLATE_CONTEXT_PROCESSORS = (
+            ...
+            'mezzanine_themes.theme_settings',
+        )
+
+
+    3. Add urls to urls.py.
+       OPTIONAL: To serve robots.txt.
+
+        urlpatterns = patterns("",
+            ...
+            (r"", include(mezzanine_themes.urls)),
+        )
 
 
 Creating your own theme
@@ -66,24 +86,43 @@ javacripts or css scripts to the child templates.
 
 From here, the jquery.min.js library in base_theme will also be available to my_awesome_theme, just remember to include both the themes into INSTALLED_APPS.
 
-You'll notice that there are no *.py files in the themes. I prefer it this way, so it looks less scrary when we assign designers to work on the theme. =)
-
 
 Release Notes
 ---
-11-02-2013: Updated default templates to Mezzanine 1.3.0 templates.
+09-04-2013:
+- Revamped project.
+- Moved all themes to /themes/.
+- Added defaults.py and context_processors.py to customize themes.
+- Added /plugins/.
+- Removed Mezzanine templates.
 
-25-09-2012: Added business theme by Dmitry Falk.
 
-11-09-2012: Added html5_boilerplate theme by Renyi Khor.
+11-02-2013:
+- Updated default templates to Mezzanine 1.3.0 templates.
 
-10-09-2012: Updated default templates to Mezzanine 1.2.4 templates.
 
-06-06-2012: Added Classic theme by Dmitry Falk.
+25-09-2012:
+- Added business theme by Dmitry Falk.
 
-05-06-2012: Updated default templates to Mezzanine 1.1 templates.
 
-08-03-2012: First release. Examples coming soon.
+11-09-2012:
+- Added html5_boilerplate theme by Renyi Khor.
+
+
+10-09-2012:
+- Updated default templates to Mezzanine 1.2.4 templates.
+
+
+06-06-2012:
+- Added Classic theme by Dmitry Falk.
+
+
+05-06-2012:
+- Updated default templates to Mezzanine 1.1 templates.
+
+
+08-03-2012:
+- First release. Examples coming soon.
 
 
 Contributors
@@ -92,7 +131,6 @@ If you have a theme you'd like to share, just send a pull request.
 
     Renyi Khor (https://github.com/renyi)
     Dmitry Falk (https://github.com/dfalk)
-    Glen (https://github.com/iepathos)
 
 
 External Links
