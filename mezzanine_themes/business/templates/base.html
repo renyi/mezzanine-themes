@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load pages_tags mezzanine_tags i18n %}
+{% load pages_tags mezzanine_tags i18n future %}
 <html>
 <head>
 
@@ -12,8 +12,8 @@
 <link rel="icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
 
 {% ifinstalled mezzanine.blog %}
-<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url blog_post_feed "rss" %}">
-<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url blog_post_feed "atom" %}">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
 {% endifinstalled %}
 
 {% compress css %}

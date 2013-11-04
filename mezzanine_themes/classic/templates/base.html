@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load pages_tags mezzanine_tags i18n %}
+{% load pages_tags mezzanine_tags i18n future %}
 <html>
 <head>
 
@@ -12,8 +12,8 @@
 <link rel="icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
 
 {% ifinstalled mezzanine.blog %}
-<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url blog_post_feed "rss" %}">
-<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url blog_post_feed "atom" %}">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
 {% endifinstalled %}
 
 {% compress css %}
@@ -60,7 +60,7 @@ $(function() {
             {% nevercache %}
             {% include "includes/user_panel.html" %}
             {% endnevercache %}
-            <form action="{% url search %}" class="form-search">
+            <form action="{% url "search" %}" class="form-search">
             <input class="input-medium" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
             <button class="btn btn-small" type="submit"><i class="icon-search"></i></button>
             </form>

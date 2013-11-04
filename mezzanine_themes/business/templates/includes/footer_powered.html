@@ -1,4 +1,4 @@
-{% load mezzanine_tags i18n %}
+{% load mezzanine_tags i18n future %}
 {% trans "Powered by" %}
 <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
 <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
@@ -8,5 +8,5 @@
 {% trans "Theme by" %} <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>
 {% ifinstalled mezzanine.mobile %}
 <span class="separator">|</span>
-<a href="{% url set_device "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
+<a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
 {% endifinstalled %}

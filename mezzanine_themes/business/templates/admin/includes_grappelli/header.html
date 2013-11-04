@@ -1,4 +1,4 @@
-{% load i18n grp_tags %}
+{% load i18n grp_tags future %}
 
 <div id="header">
     <div class="branding">&nbsp;</div>
@@ -12,12 +12,12 @@
         <!-- Userlinks -->
         {% block userlinks %}
         <!-- Documentation -->
-        {% url django-admindocs-docroot as docsroot %}
+        {% url "django-admindocs-docroot" as docsroot %}
         {% if docsroot %}
         <li><a href="{{ docsroot }}">{% trans 'Documentation' %}</a></li>
         {% endif %}
         <!-- Change Password -->
-        {% url admin:password_change as password_change_url %}
+        {% url "admin:password_change" as password_change_url %}
         {% if password_change_url %}
         <li><a href="{{ password_change_url }}">
         {% else %}
@@ -25,7 +25,7 @@
         {% endif %}
         {% trans 'Change password' %}</a></li>
         <!-- Logout -->
-        {% url admin:logout as logout_url %}
+        {% url "admin:logout" as logout_url %}
         {% if logout_url %}
         <li><a href="{{ logout_url }}">
         {% else %}
