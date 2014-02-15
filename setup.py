@@ -10,5 +10,4 @@ setup(
     author_email='renyi.ace@gmail.com',
     packages=find_packages(),
     include_package_data = True,
-    #install_requires=['mezzanine'],
 )
