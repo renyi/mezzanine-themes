@@ -15,9 +15,11 @@ fi
 cd mezzanine_themes
 mkdir $themeName
 cd $themeName
+echo "" > __init__.py
 mkdir static
 mkdir templates
 cd static
+mkdir img
 mkdir js
 mkdir css
 cd ../templates
