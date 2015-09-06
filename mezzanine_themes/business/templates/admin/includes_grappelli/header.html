@@ -1,9 +1,9 @@
-{% load i18n grp_tags future %}
+{% load i18n %}
 
 <div id="header">
     <div class="branding">&nbsp;</div>
     <!-- Title -->
-    <div class="admin-title">{{ settings.SITE_TITLE }}</div>
+    <div class="admin-title">Mezzanine</div>
     {% if user.is_authenticated and user.is_staff %}
     <!-- Bookmarks (temporary) -->
     <ul id="user-tools">
