@@ -46,83 +46,94 @@ $(function() {
 
 </head>
 <body id="{% block body_id %}body{% endblock %}">
-
-<div id="header" class="container">
+    
+<div id="wrapper" class="container">
     <div class="row">
-        <div id="site-info" class="span6">
-            <div id="site-logo"><a href="/"><img src="{{ STATIC_URL }}img/logo.png" /></a></div>
-            <div id="site-titles">
-            {% if settings.SITE_TITLE %}<div id="site-title"><a href="/">{{ settings.SITE_TITLE }}</a></div>{% endif %}
-            {% if settings.SITE_TAGLINE %}<div id="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
+    <div class="col-md-2"></div>
+    
+    <div class="col-md-8">
+    <div id="header" class="container">
+        <div class="row">
+            <div id="site-info" class="col-md-6">
+                <div id="site-logo"><a href="/"><img src="{{ STATIC_URL }}img/logo.png" /></a></div>
+                <div id="site-titles">
+                {% if settings.SITE_TITLE %}<div id="site-title"><a href="/">{{ settings.SITE_TITLE }}</a></div>{% endif %}
+                {% if settings.SITE_TAGLINE %}<div id="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
+                </div>
+            </div>
+            <div id="navigation" class="col-md-6">
+                {% page_menu "pages/menus/dropdown.html" %}
             </div>
         </div>
-        <div id="navigation" class="span6">
-            {% page_menu "pages/menus/dropdown.html" %}
-        </div>
     </div>
-</div>
 
-<div id="main" class="container">
-
-    {% nevercache %}
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }}" data-alert="alert">
-    <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
-    </div>
-    {% endfor %}
-    {% endnevercache %}
-
-    {% block full %}
-    <div class="row">
-
-        <div class="span9 middle">
-
-            <ul class="breadcrumb-custom">
-            {% spaceless %}
-            {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-            {% endspaceless %}
-            </ul>
-
-            <h1>{% block title %}{% endblock %}</h1>
-
-            {% block main %}{% endblock %}
-
+    <div id="main" class="container">
+    
+        {% nevercache %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" data-alert="alert">
+        <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
         </div>
-
-        <div class="span3 right">
-
-            <div class="panel">
-            {% block right_panel %}
-            {% ifinstalled mezzanine.twitter %}
-            {% include "twitter/tweets.html" %}
-            {% endifinstalled %}
-            {% endblock %}
+        {% endfor %}
+        {% endnevercache %}
+    
+        {% block full %}
+        <div class="row">
+    
+            <div class="col-md-9 middle">
+    
+                <ul class="breadcrumb-custom">
+                {% spaceless %}
+                {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+                {% endspaceless %}
+                </ul>
+    
+                <h1>{% block title %}{% endblock %}</h1>
+    
+                {% block main %}{% endblock %}
+    
             </div>
-
+    
+            <div class="col-md-3 right">
+    
+                <div class="panel">
+                {% block right_panel %}
+                {% ifinstalled mezzanine.twitter %}
+                {% include "twitter/tweets.html" %}
+                {% endifinstalled %}
+                {% endblock %}
+                </div>
+    
+            </div>
+    
+        </div><!-- /row -->
+        {% endblock %}
+    
+    </div><!-- /container #main -->
+    
+    <div id="footer-line" class="container">
+        <div class="row">
+        <div class="col-md-6">
+        {% include "includes/footer_text.html" %}
         </div>
-
-    </div><!-- /row -->
-    {% endblock %}
-
-</div><!-- /container #main -->
-
-<div id="footer-line" class="container">
-    <div class="row">
-    <div class="span6">
-    {% include "includes/footer_text.html" %}
+        <div id="footer-powered" class="col-md-6">
+        {% include "includes/footer_powered.html" %}
+        <a onclick="scrollToTop();return false;" href="#"><i class="icon-arrow-up"></i></a>
+        </div>
+        </div>
     </div>
-    <div id="footer-powered" class="span6">
-    {% include "includes/footer_powered.html" %}
-    <a onclick="scrollToTop();return false;" href="#"><i class="icon-arrow-up"></i></a>
+    
+    <div id="footer" class="container">
+        {% page_menu "pages/menus/footer.html" %}
     </div>
+    
     </div>
-</div>
-
-<div id="footer" class="container">
-    {% page_menu "pages/menus/footer.html" %}
-</div>
-
+    
+    </div>
+    
 {% include "includes/footer_scripts.html" %}
+    <div class="col-md-2"></div>
+</div>
 
 </body>
 </html>
