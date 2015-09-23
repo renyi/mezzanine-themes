@@ -49,14 +49,14 @@ $(function() {
 
 <div id="header" class="container">
     <div class="row">
-        <div id="site-info" class="span6">
+        <div id="site-info" class="col-md-6">
             <div id="site-logo"><a href="/"><img src="{{ STATIC_URL }}img/logo.png" /></a></div>
             <div id="site-titles">
             {% if settings.SITE_TITLE %}<div id="site-title"><a href="/">{{ settings.SITE_TITLE }}</a></div>{% endif %}
             {% if settings.SITE_TAGLINE %}<div id="site-tagline">{{ settings.SITE_TAGLINE }}</div>{% endif %}
             </div>
         </div>
-        <div id="user-info" class="span6">
+        <div id="user-info" class="col-md-6">
             {% nevercache %}
             {% include "includes/user_panel.html" %}
             {% endnevercache %}
@@ -85,7 +85,7 @@ $(function() {
     {% block full %}
     <div class="row">
 
-        <div class="span9 middle">
+        <div class="col-md-9 middle">
 
             <ul class="breadcrumb-custom">
             {% spaceless %}
@@ -99,7 +99,7 @@ $(function() {
 
         </div>
 
-        <div class="span3 right">
+        <div class="col-md-3 right">
 
             <div class="panel">
             {% block right_panel %}
@@ -118,10 +118,10 @@ $(function() {
 
 <div id="footer-line" class="container">
     <div class="row">
-    <div class="span6">
+    <div class="col-md-6">
     {% include "includes/footer_text.html" %}
     </div>
-    <div id="footer-powered" class="span6">
+    <div id="footer-powered" class="col-md-6">
     {% include "includes/footer_powered.html" %}
     <a onclick="scrollToTop();return false;" href="#"><i class="icon-arrow-up"></i></a>
     </div>
